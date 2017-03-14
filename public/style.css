@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    height: 13%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: #2e4f84;
+}
+
+.cont {
+    margin: 0 auto;
+    height: 130px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont ul li {
+    padding: 8px;
+    margin-left: 8px;
+    list-style: none;
+}
+
+.cont ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 200%;
+    font-family: 'Griffy', cursive;
+}
+
+#logo {
+    color: white;
+    font-size: 240%;
+    font-family: 'Griffy', cursive;
+    transition: all 600ms ease-in-out;
+}
+
+#logo:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.cont ul li a:hover {
+    color: red;
+}
+
+
+/* end of header */
+
+
+/* home */
+
+.homealone {
+    width: 100%;
+}
+
+.home {
+    padding: 0.11px;
+    margin-right: 0px;
+    float: left;
+    height: 87%;
+    width: 50%;
+    border-right: 2px solid black;
+    font-family: 'Arvo', serif;
+}
+
+.home h1 {
+    text-align: center;
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+}
+
+.design {
+    width: 100%;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.design h2 {
+    font-family: 'Griffy', cursive;
+    font-size: 260%;
+}
+
+.design p {
+    width: 60%;
+}
+
+.design i {
+    font-size: 500%;
+}
+
+.developer {
+    width: 100%;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer h2 {
+    font-family: 'Griffy', cursive;
+    font-size: 260%;
+}
+
+.developer p {
+    width: 60%;
+}
+
+.sidecont {
+    width: 50%;
+    background-color: rgb(96, 74, 140);
+    height: 87%;
+    padding: 0.11px;
+    float: left;
+    color: white;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
