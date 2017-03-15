@@ -72,14 +72,10 @@ body {
     padding: 0.11px;
     margin-right: 0px;
     float: left;
-    height: 87%;
+    height: 77%;
     width: 50%;
     border-right: 2px solid black;
     font-family: 'Arvo', serif;
-}
-
-.home h1 {
-    text-align: center;
 }
 
 .two {
@@ -105,8 +101,14 @@ body {
     width: 60%;
 }
 
-.design i {
-    font-size: 500%;
+.design img {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.developer img {
+    width: 150px;
+    margin-bottom: 5px;
 }
 
 .developer {
@@ -130,10 +132,20 @@ body {
 .sidecont {
     width: 50%;
     background-color: rgb(96, 74, 140);
-    height: 87%;
+    height: 77%;
     padding: 0.11px;
     float: left;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidecont h3 {
+    font-size: 350%;
+    margin-bottom: 60px;
+    font-family: 'Griffy', cursive;
 }
 
 .skills {
@@ -141,4 +153,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Arvo', serif;
 }
+
+.skills h5 {
+    font-size: 200%;
+}
+
+.info {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.apper-appear {
+    opacity: 0.01;
+}
+
+.apper-appear .apper-appear-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+
+/* footer begin */
+
+.footer {
+    position: fixed;
+    border-top: 2px solid black;
+    top: 90%;
+    background-color: #2e4f84;
+    height: 10%;
+    width: 100%;
+}
+
+
+/* footer end */

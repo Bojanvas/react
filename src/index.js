@@ -8,6 +8,7 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Aboutme from "./components/aboutme";
 import Design from "./components/design";
+import Footer from './components/footer';
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
              <Header />
 
              {this.props.children}
+             <Footer />
             </div>
         );
     }
