@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Side from './homeside';
 import Design from "./design";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Home extends Component{
     constructor(props){
@@ -9,21 +10,25 @@ class Home extends Component{
             design : {
                 title:"Design",
                 skils:['HTML',"CSS","Bootstrap","JavaScript","JQuery","React","Angular","Photoshop"],
+                text:["My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience."],
                 author: "Bojan Vasilevski",
-                contact:"If you like what you see contact me"
+                contact:"If you like what you see contact me",
+                 color:{backgroundColor:'rgb(214, 211, 40)'}
             },
             develop : {
                 title:"Web Developer",
                 skils:['Node.js',"Express","MongoDB","Mongoose","Php"],
+                text:["I develop to ensures your website is lightweight, easily expandable, search engine friendly and of course W3C compliant"],
                 author: "Bojan Vasilevski",
-                contact:"If you like what you see contact me"
-
+                contact:"If you like what you see contact me",
+                color:{backgroundColor:'rgb(40, 214, 92)'}
             },
             obj:{
                 title:"Hello World",
-                skils:[],
+                skils:['Wellcome to my site if you whant to read more about me and what have i designed check the tabs'],
                 author: "Bojan Vasilevski",
-                contact:"Contact me"
+                contact:"Contact me",
+                color:{backgroundColor:'rgb(96, 74, 140)',display:'none' }
 
             }
         }
@@ -31,39 +36,65 @@ class Home extends Component{
     obj(parms){
         
         if(parms == 'design'){
-            console.log('design');
-             this.setState({
+            this.setState({
                obj:this.state.design
              } )
+            var anime = document.getElementById('design');
+            var appear = document.querySelector('#sidecont');
+            var ap1 = document.querySelector('#developer');
+            document.querySelector('#text').className = 'fadeout';
+            document.querySelector('#skills').className = 'fadein';
+            ap1.className = 'fadein';
+            anime.className = ' fadeout';
+           appear.className = " appear";
+             
         }else if (parms == 'develop'){
             this.setState({
                 obj:this.state.develop
             })
+            var anime = document.querySelector('#developer');
+            var appear = document.querySelector('#sidecont');
+            var ap2 = document.querySelector('#design');
+                        document.querySelector('#text').className = 'fadeout';
+            document.querySelector('#skills').className = 'fadein';
+            ap2.className= 'fadein';
+            anime.className = ' fadeout';
+            appear.className = " appear";
+            
         }
     }
     render(){
         return(
             <div className="homealone">
-            <div className="home">
+            <div className="home ">
+             <ReactCSSTransitionGroup
+             transitionName='main'
+             transitionAppear = {true}
+             transitionAppearTimeout = {1000}
+             transitionEnter= {false}
+             transitionLeave = {false}>
                 <div className="two">
-                   <div className="design">
+                   <div id = 'design' className="">
                     <h2>Web Design</h2>
                     <img src = 'img/des.png' alt = 'design' />
                     <p>My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.</p>
-                    <button onClick = {()=>{this.obj('design') }} className = 'btn btn-info'>Show me more</button>
+                    <button id ='bt' onClick = {()=>{this.obj('design') }} className = 'btn btn-info'>Show me more</button> 
                    </div>
-                  <div className="developer">
+                   <Side  obj={this.state.obj} />
+                  <div id = 'developer' className="developer">
                   <h2>Web Development</h2>
                   <img src = 'img/node.png' alt = 'develoop' />
                   <p>I develop to ensures your website is lightweight, easily expandable, search engine friendly and of course W3C compliant</p>
-                  <button  onClick = {()=>{this.obj('develop') }} className = 'btn btn-info'>Show me more</button>
+                  <button id ='bt'  onClick = {()=>{this.obj('develop') }} className = 'btn btn-info'>Show me more</button>
                   </div>
                 </div>
+                  </ReactCSSTransitionGroup>
             </div>
             
-            <Side obj={this.state.obj} />
+           
             </div>
         )
     }
 }
 export default Home;
+
