@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form method='post' action='/upload' enctype="multipart/form-data">
+        <input type="file" name='image' />
+        <input type="submit" /></form>
+
+    <form class='form-group' style='width:80%' action="/blog" method="post" enctype="application/x-www-form-urlencoded">
+        <input id='title' type="text" class='form-control' type="text" name='title' placeholder='enter Title' required/>
+        <input id='url' class='form-control' type="text" name='url' placeholder='enter image url'>
+        <textarea id='content' class='form-control' placeholder='enter text here' name="content" id="content" cols="100" rows="10"></textarea>
+        <input class='form-control' type="submit" value='submit'>
+
+        <button id='update' type="button" class="btn btn-large btn-block btn-default">Update</button>
+
+    </form>
+    <div class="posts">
+
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        var up = document.querySelector('#update');
+        var tit = document.querySelector('#title');
+        var url = document.querySelector('#url');
+        var txt = document.querySelector('#content');
+        window.onload = function() {
+            get();
+        }
+
+        up.addEventListener('click', function() {
+            fetch('/update', {
+                method: "PUT",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    title: tit.value,
+                    url: url.value,
+                    content: txt.value
+                })
+            })
+        })
+
+        function deletepost(id) {
+            console.log(id);
+        }
+
+        function get() {
+            fetch('/blogpost', {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                }
+            }).then(function(response) {
+                response.json().then(function(data) {
+                    data.map(function(post, i) {
+                        console.log(post.title);
+                        var posts = document.createElement('div');
+                        var button = document.createElement('button');
+                        var h3 = document.createElement('h3');
+                        var edit = document.createElement('button');
+                        var p = document.createElement('p');
+                        button.className = 'delete';
+                        button.innerHTML = 'delete';
+                        edit.className = 'edit';
+                        edit.innerHTML = 'edit';
+                        button.onclick = function() {
+                            var id = post._id;
+                            fetch('delpost', {
+                                method: 'POST',
+                                headers: {
+                                    "Accept": "application/json",
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    data: id
+                                })
+                            })
+                        }
+                        edit.onclick = function() {
+                            var id = post._id;
+                            var uid = post.id;
+                            fetch('/onepost/' + id, {
+                                method: 'GET',
+                                headers: {
+                                    "Accept": "application/json",
+                                    "Content-Type": "application/json"
+                                }
+                            }).then(function(response) {
+                                response.json().then(function(data) {
+                                    tit.value = data.title;
+                                    url.value = data.url;
+                                    txt.innerHTML = data.content;
+
+                                })
+                            })
+                        }
+                        h3.innerHTML = post.title;
+                        p.innerHTML = post.content;
+                        posts.appendChild(h3);
+                        posts.appendChild(p);
+                        posts.appendChild(button);
+                        posts.appendChild(edit);
+                        document.querySelector('.posts').appendChild(posts);
+                    })
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

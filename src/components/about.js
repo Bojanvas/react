@@ -7,18 +7,22 @@ class About extends Component{
         this.state={
             style:{
                 backgroundColor:'white'
+            },
+            style1:{
+                backgroundColor:'#859cc1'
             }
         }
     }
     pos(event){
         var posi = event.clientY;
-        console.log(posi)
         if(posi>300){
-            this.setState={
-                style:{
-                    backgroundColor:'red'
-                }
-            }
+            this.setState({
+                style:this.state.style1
+            });
+        }if(posi<300){
+            this.setState({
+                style:this.state.style
+            })
         }
     }
     render(){

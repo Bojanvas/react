@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Side from './homeside';
-import Design from "./design";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Home extends Component{
@@ -9,7 +8,7 @@ class Home extends Component{
         this.state = {
             design : {
                 title:"Design",
-                skils:['HTML',"CSS","Bootstrap","JavaScript","JQuery","React","Angular","Photoshop"],
+                skils:['HTML  ',"CSS  ","Bootstrap  ","JavaScript  ","JQuery  ","React  ","Angular  ","Photoshop  "],
                 text:["My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience."],
                 author: "Bojan Vasilevski",
                 contact:"If you like what you see contact me",
@@ -17,7 +16,7 @@ class Home extends Component{
             },
             develop : {
                 title:"Web Developer",
-                skils:['Node.js',"Express","MongoDB","Mongoose","Php"],
+                skils:['Node.js  ',"Express  ","MongoDB  ","Mongoose  ","Php  "],
                 text:["I develop to ensures your website is lightweight, easily expandable, search engine friendly and of course W3C compliant"],
                 author: "Bojan Vasilevski",
                 contact:"If you like what you see contact me",

@@ -277,6 +277,7 @@ body {
 
 .about {
     width: 100%;
+    height: 770px;
     padding: 0.11px;
 }
 
@@ -303,6 +304,212 @@ body {
 
 
 /* end about */
+
+
+/* begin portfolio */
+
+#port {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sites {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#port h3 {
+    font-family: 'Griffy', cursive;
+    font-size: 220%;
+}
+
+#port img {
+    border: 3px solid black;
+    width: 65%;
+}
+
+.infosite {
+    font-weight: 600;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left {
+    position: absolute;
+    font-size: 400%;
+    left: 10%;
+    top: 50%;
+}
+
+#left:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#right {
+    position: absolute;
+    font-size: 400%;
+    left: 90%;
+    top: 50%;
+}
+
+#right:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* end portfolio */
+
+
+/* contact begin */
+
+.contact {
+    padding: 0.11px;
+    width: 100%;
+    height: 770px;
+    background-color: #2e4f84;
+}
+
+.contact h3 {
+    color: white;
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size: 250%;
+}
+
+#conta {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 40px;
+}
+
+.contact button {
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 159%;
+}
+
+#conta input {
+    margin-bottom: 30;
+}
+
+#conta label {
+    color: white;
+}
+
+#submit {
+    display: none;
+    margin-top: 20px;
+    margin-left: 50%;
+    font-size: 159%;
+}
+
+#final {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 40px;
+}
+
+#final label {
+    color: white;
+}
+
+#final input {
+    width: 70%;
+}
+
+
+/* contact end */
+
+
+/* blog brgins */
+
+.blog {
+    width: 100%;
+}
+
+.blog h5 {
+    text-align: center;
+    font-family: 'Griffy', cursive;
+    font-size: 250%;
+}
+
+.posts {
+    width: 60%;
+    margin: 0 auto;
+    height: 200px;
+    border-bottom: 2px solid #2e4f84;
+}
+
+.titblog {
+    text-align: center;
+}
+
+.posts img {
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+}
+
+.conten {
+    height: 40px;
+    overflow: hidden;
+}
+
+.po {
+    width: 100%;
+}
+
+.post {
+    border-left: 2px solid #2e4f84;
+    border-right: 2px solid #2e4f84;
+    width: 60%;
+    height: 770px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.post h4 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 220%;
+    font-family: 'Arvo', serif;
+}
+
+.post img {
+    width: 800px;
+}
+
+.text {
+    width: 72%;
+    padding-bottom: 150px;
+    font-family: 'Arvo', serif;
+    font-size: 140%;
+}
+
+.date {
+    margin-bottom: 60px;
+    margin-right: 600px;
+}
+
+
+/* blog ends */
 
 
 /* footer begin */

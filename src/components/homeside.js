@@ -15,7 +15,9 @@ class Side extends Component{
 
        
        var skils = skills.map((skil,i) =>{
-                return <h5 key = {i} >{skil}</h5>;      
+                return <h5 key = {i} >{skil}
+                <i className="fa fa-check" aria-hidden="true"></i>
+                </h5>
         }) 
         return(
             <div id="sidecont"style ={this.props.obj.color}>
