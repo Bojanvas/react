@@ -9,7 +9,7 @@ class About extends Component{
                 backgroundColor:'white'
             },
             style1:{
-                backgroundColor:'#859cc1'
+                backgroundColor:'white'
             }
         }
     }

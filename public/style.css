@@ -331,10 +331,12 @@ body {
 
 #port img {
     border: 3px solid black;
-    width: 65%;
+    width: 63%;
 }
 
 .infosite {
+    padding-left: 16px;
+    padding-right: 10px;
     font-weight: 600;
     width: 65%;
     display: flex;

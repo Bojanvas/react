@@ -14877,7 +14877,7 @@ var About = function (_Component) {
                 backgroundColor: 'white'
             },
             style1: {
-                backgroundColor: '#859cc1'
+                backgroundColor: 'white'
             }
         };
         return _this;
@@ -15479,7 +15479,7 @@ var Home = function (_Component) {
             design: {
                 title: "Design",
                 skils: ['HTML  ', "CSS  ", "Bootstrap  ", "JavaScript  ", "JQuery  ", "React  ", "Angular  ", "Photoshop  "],
-                text: ["My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience."],
+                text: ["I create my websites using the latest technology to produce websites that work no matter what device they are being viewed on."],
                 author: "Bojan Vasilevski",
                 contact: "If you like what you see contact me",
                 color: { backgroundColor: 'rgb(214, 211, 40)' }
@@ -15487,7 +15487,7 @@ var Home = function (_Component) {
             develop: {
                 title: "Web Developer",
                 skils: ['Node.js  ', "Express  ", "MongoDB  ", "Mongoose  ", "Php  "],
-                text: ["I develop to ensures your website is lightweight, easily expandable, search engine friendly and of course W3C compliant"],
+                text: ["Social Media is a powerful part of a comprehensive marketing strategy, boost your visibility and increase your dialogue with your customers"],
                 author: "Bojan Vasilevski",
                 contact: "If you like what you see contact me",
                 color: { backgroundColor: 'rgb(40, 214, 92)' }
