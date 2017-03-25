@@ -4,7 +4,10 @@ var router = require('./routes/router.js');
 var mongoose = require('mongoose');
 
 var app = express();
-mongoose.connect('mongodb://' + process.env.db_user + ':' + process.env.db_pass + '@ds135820.mlab.com:35820/bojanblog', function() {
+mongoose.connect('mongodb://' + process.env.db_user + ':' + process.env.db_pass + '@ds135820.mlab.com:35820/bojanblog', function(err) {
+    if (err) {
+        throw err;
+    } else {}
     console.log('conected');
 });
 app.use(express.static(__dirname + "/public/"));
