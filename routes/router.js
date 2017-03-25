@@ -85,8 +85,7 @@ router.post('/upload', function(req, res) {
                     if (err) {
                         throw err;
                     } else {
-                        res.redirect('/post');
-                        res.end();
+                        res.send('img uploaded');
                     }
                 })
             }
