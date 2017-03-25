@@ -29,7 +29,7 @@ router.get('/post', function(req, res) {
         res.sendFile(path.resolve(__dirname + '/../public/post.html'));
     }
 })
-router.get('/blogpost', function(req, res) {
+router.get('/blogpost/', function(req, res) {
     Post.find({}, function(err, docs) {
         if (err) {
             throw err;
