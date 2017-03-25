@@ -1,24 +1,25 @@
 {
-  "name": "react-tut",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "babel-core": "^6.24.0",
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "history": "^4.6.0",
-    "mongoose": "^4.9.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-router": "^2.8.1"
-  },
-  "devDependencies": {
-    "babel-preset-es2015": "^6.24.0"
-  }
+    "name": "react-tut",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "babel-core": "^6.24.0",
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "history": "^4.6.0",
+        "mongoose": "^4.9.0",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2",
+        "react-router": "^2.8.1"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.24.0"
+    }
 }
